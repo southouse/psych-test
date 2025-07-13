@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Alert } from 'react-bootstrap';
+import PrivacyPolicy from './PrivacyPolicy';
 
 function Result({ answers, restartTest }) {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
   const egenCount = answers.filter((answer) => answer === 'egen').length;
   const tetoCount = answers.filter((answer) => answer === 'teto').length;
 
@@ -24,23 +27,31 @@ function Result({ answers, restartTest }) {
   }
 
   return (
-    <div className="text-center">
-      <h4>테스트 결과</h4>
-      <Alert variant="success" className="mt-4">
-        <h5>당신은 {resultType}입니다!</h5>
-        <p className="mb-0">
-          {resultDescription}
-        </p>
-        <hr />
-        <p className="mb-0">
-          에겐남 성향: {egenPercentage}%
-        </p>
-        <p className="mb-0">
-          테토남 성향: {tetoPercentage}%
-        </p>
-      </Alert>
-      <Button onClick={restartTest} className="mt-3">다시 시작하기</Button>
-    </div>
+    <>
+      <div className="text-center">
+        <h4>테스트 결과</h4>
+        <Alert variant="success" className="mt-4">
+          <h5>당신은 {resultType}입니다!</h5>
+          <p className="mb-0">
+            {resultDescription}
+          </p>
+          <hr />
+          <p className="mb-0">
+            에겐남 성향: {egenPercentage}%
+          </p>
+          <p className="mb-0">
+            테토남 성향: {tetoPercentage}%
+          </p>
+        </Alert>
+        <Button onClick={restartTest} className="mt-3">다시 시작하기</Button>
+        <div className="mt-3">
+          <Button variant="link" size="sm" onClick={() => setShowPrivacy(true)}>
+            개인정보처리방침
+          </Button>
+        </div>
+      </div>
+      <PrivacyPolicy show={showPrivacy} handleClose={() => setShowPrivacy(false)} />
+    </>
   );
 }
 

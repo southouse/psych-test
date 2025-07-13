@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/psych-test/static/css/main.467c3bba.css",
-    "main.js": "/psych-test/static/js/main.150e42a3.js",
-    "static/js/453.2b451710.chunk.js": "/psych-test/static/js/453.2b451710.chunk.js",
-    "index.html": "/psych-test/index.html",
-    "main.467c3bba.css.map": "/psych-test/static/css/main.467c3bba.css.map",
-    "main.150e42a3.js.map": "/psych-test/static/js/main.150e42a3.js.map",
-    "453.2b451710.chunk.js.map": "/psych-test/static/js/453.2b451710.chunk.js.map"
+    "main.css": "/static/css/main.467c3bba.css",
+    "main.js": "/static/js/main.40eeefcf.js",
+    "static/js/453.2b451710.chunk.js": "/static/js/453.2b451710.chunk.js",
+    "index.html": "/index.html",
+    "main.467c3bba.css.map": "/static/css/main.467c3bba.css.map",
+    "main.40eeefcf.js.map": "/static/js/main.40eeefcf.js.map",
+    "453.2b451710.chunk.js.map": "/static/js/453.2b451710.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.467c3bba.css",
-    "static/js/main.150e42a3.js"
+    "static/js/main.40eeefcf.js"
   ]
 }
